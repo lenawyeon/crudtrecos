@@ -32,3 +32,5 @@ SELECT * FROM treco
 -- Lista todos os trecos do "Joca" (id = 1) que esteja "online"
 SELECT * FROM treco
 WHERE t_usuario = "1" AND t_status= "on"
+
+-- python3.12 -m venv .venv                                                 
