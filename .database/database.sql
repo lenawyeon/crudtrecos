@@ -19,11 +19,11 @@ USE crudtrecos;
 CREATE TABLE usuario (
     u_id INT PRIMARY KEY AUTO_INCREMENT,
     u_data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    u_nome VARCHAR(127) NOT NULL, -- VARCHAR=STRING
+    u_nome VARCHAR(127) NOT NULL,
     u_nascimento DATE NOT NULL,
     u_email VARCHAR(255) NOT NULL,
     u_senha VARCHAR(63) NOT NULL,
-    u_status ENUM ('on', 'off', 'del') DEFAULT 'on' -- ENUM = CAIXA PARA SELECIONAR
+    u_status ENUM ('on', 'off', 'del') DEFAULT 'on'
 );
 
 -- Cria a tabela da entidade "treco"
@@ -45,12 +45,12 @@ CREATE TABLE treco (
 -- -------------------------------------- --
 
 -- Tabela 'usuario'
-INSERT INTO usuario ( -- INSERIR
+INSERT INTO usuario (
     u_nome,
     u_nascimento,
     u_email,
     u_senha
-) VALUES ( -- VALOR
+) VALUES (
     'Joca da Silva',
     '2000-04-25',
     'jocasilva@email.com',
@@ -59,7 +59,7 @@ INSERT INTO usuario ( -- INSERIR
     'Marineuza Siriliano',
     '2003-03-12',
     'marineuza@email.com',
-    SHA1('senha123')
+    SHA1('Senha123')
 ), (
     'Setembrino Trocatapas',
     '1998-12-14',
@@ -76,10 +76,16 @@ INSERT INTO treco (
     t_localizacao
 ) VALUES ( 
     'https://picsum.photos/200', 
-    '1', 
-    'Caneca de café do elon musk', 
-    'Uma caneca feia pra caracas que arrumei em algum lugar', 
-    'Na estante da sala, prateleira de baixo'
+    '1', -- Id de um usuário existente
+    'Caneca de café do Elon Musk', 
+    'Uma caneca feia pra caracas que arrumei em algum lugar.', 
+    'Na estante da sala, prateleira de baixo.'
+), (
+    'https://picsum.photos/199',
+    '1',
+    'Caneca do Curintia',
+    'Cabem 300 ml, mas está com a alça quebrada e colada com superbondi.',
+    'Na estante da sala, prateleira do meio.'
 );
 
 -- Inserções da IA (veja o prompt no material da aula 11)

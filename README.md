@@ -1,2 +1,2 @@
-# crudtrecos
- Gerenciador de coleções em python, flask e MySQL
+# CRUDTrecos
+Um gerenciador de coleções em Python, Flask e MySQL.
